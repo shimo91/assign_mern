@@ -13,7 +13,7 @@ const Login = () => {
         setUser({...user,[e.target.name]:e.target.value})
     }
     const addHandler=()=>{
-        axios.post('http://127.0.0.1:5000/user/login',user).then((res)=>{
+        axios.post('https://employee-mern-back-app.onrender.com/user/login',user).then((res)=>{
             alert(res.data.message);
             if(res.data.message=='success')
             {
