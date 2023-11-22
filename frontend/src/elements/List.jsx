@@ -67,7 +67,7 @@ const List = () => {
 
   useEffect(()=>{
 
-    axiosInstance.get('http://127.0.0.1:5000/employee/getEmp').then((res)=>{
+    axiosInstance.get('https://employee-mern-back-app.onrender.com/employee/getEmp').then((res)=>{
       setemployee(...employee,res.data);
       console.log(employee);
     })
@@ -78,7 +78,7 @@ const List = () => {
     var result = window.confirm("You want to delete?");
     if (result) {
       console.log(id);
-      axiosInstance.delete('http://127.0.0.1:5000/employee/remove/'+id).then((res)=>{
+      axiosInstance.delete('https://employee-mern-back-app.onrender.com/employee/remove/'+id).then((res)=>{
         alert(res.data);
        window.location.reload(true);
         
