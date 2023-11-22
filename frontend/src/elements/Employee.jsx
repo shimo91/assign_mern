@@ -26,7 +26,7 @@ const Employee = (props) => {
 
     if(props.method==="put"){
       console.log("id is :"+props.data._id)
-      axiosInstance.put("http://127.0.0.1:5000/employee/update/"+props.data._id,emp)
+      axiosInstance.put("https://employee-mern-back-app.onrender.com/employee/update/"+props.data._id,emp)
       .then((response)=>{
        
         if (response.data==="Updated successfully") {
@@ -42,7 +42,7 @@ const Employee = (props) => {
     else
     {
 
-      axiosInstance.post('http://127.0.0.1:5000/employee/addEmp',emp).then((res)=>{
+      axiosInstance.post('https://employee-mern-back-app.onrender.com/employee/addEmp',emp).then((res)=>{
         alert(res.data);
         navigate("/list")
       })
